@@ -2,11 +2,18 @@ import java.util.*;
 public class zoo{
 
   public static void main(String[] args){
-    
-    Scanner my_zoo_number = new Scanner(System.in);
-    System.out.println("What Animal Number?");
-    int number = my_zoo_number.nextInt();
-    
+    int number = 0;
+    int a = 0;
+    while(a==0){
+      try{
+      Scanner my_zoo_number = new Scanner(System.in);
+      System.out.println("What Animal Number?");
+      number = my_zoo_number.nextInt();
+      a=1;
+    }catch(Exception e){
+    System.out.println("Number");
+    }
+    }
     Animal[] zoo = new Animal[number];
     
     for(int i=0;i<zoo.length;i++){
@@ -35,4 +42,3 @@ public class zoo{
 
 
 }
-
